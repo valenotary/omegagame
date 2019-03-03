@@ -1,10 +1,12 @@
 class Projectile {
   Body body;
   float r;
+  PImage shroot;
 
   color col;
 
   Projectile(float x, float y, float r) {
+    shroot = loadImage("LUL.jpg");
     this.r = r;
     makeProjectile(new Vec2(x, y), r);
   }
@@ -33,6 +35,8 @@ class Projectile {
     stroke(0);
     strokeWeight(1);
     ellipse(0, 0, r * 2, r * 2);
+    //shroot.resize(0, 25);
+    //image(shroot, 0, 0);
     popMatrix();
   }
 

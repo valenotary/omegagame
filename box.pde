@@ -13,7 +13,6 @@ class Box {
 
   void killBody() {
     box2d.destroyBody(body);
-    noLoop();
   }
 
   boolean done() {
@@ -85,7 +84,7 @@ class Box {
     fd.shape = sd;
     fd.density = 1;
     fd.friction = 0.1;
-    fd.restitution = 0;
+    fd.restitution = .2;
 
     BodyDef bd = new BodyDef();
     bd.type = BodyType.DYNAMIC;
